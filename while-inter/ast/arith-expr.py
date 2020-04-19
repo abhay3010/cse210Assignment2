@@ -7,9 +7,9 @@ class AddExpr(Expr):
         self.right = right
 
     def eval(self, environment):
-        environment, lval = self.left.eval(environment)
-        environment, rval = self.right.eval(environment)
-        return environment, lval + rval
+        lval = self.left.eval(environment)
+        rval = self.right.eval(environment)
+        return lval + rval
 
 
 class SubExpr(Expr):
@@ -18,9 +18,9 @@ class SubExpr(Expr):
         self.right = right
 
     def eval(self, environment):
-        environment, lval = self.left.eval(environment)
-        environment, rval = self.right.eval(environment)
-        return environment, lval - rval
+        lval = self.left.eval(environment)
+        rval = self.right.eval(environment)
+        return lval - rval
 
 
 class MulExp(Expr):
@@ -29,9 +29,9 @@ class MulExp(Expr):
         self.right = right
 
     def eval(self, environment):
-        environment, lval = self.left.eval(environment)
-        environment, rval = self.right.eval(environment)
-        return environment, lval * rval
+        lval = self.left.eval(environment)
+        rval = self.right.eval(environment)
+        return lval * rval
 
 
 class NumExpr(Expr):
@@ -39,15 +39,15 @@ class NumExpr(Expr):
         self.val = val
 
     def eval(self,environment):
-        return environment, self.val
+        return self.val
 
 
 class VarExp(Expr):
-    def __init__(self,token):
+    def __init__(self, token):
         self.token = token
 
     def eval(self, environment):
-        return environment, environment.getordefault(self.token, 0)
+        return environment.getordefault(self.token, 0)
 
 
 

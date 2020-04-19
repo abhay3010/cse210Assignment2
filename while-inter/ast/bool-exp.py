@@ -4,7 +4,7 @@ class BoolVal(Expr):
         self.val = val
 
     def eval(self,environment):
-        return environment,self.val
+        return self.val
 
 
 class Equality(Expr):
@@ -14,9 +14,9 @@ class Equality(Expr):
         self.rexp = rexp
 
     def eval(self,environment):
-        environment, lval = self.lexp.eval(environment)
-        environment, rval = self.rexp.eval(environment)
-        return environment, lval == rval
+        lval = self.lexp.eval(environment)
+        rval = self.rexp.eval(environment)
+        return lval == rval
 
 
 
@@ -27,9 +27,9 @@ class LessThan(Expr):
         self.rexp = rexp
 
     def eval(self,environment):
-        environment, lval = self.lexp.eval(environment)
-        environment, rval = self.rexp.eval(environment)
-        return environment, lval < rval
+        lval = self.lexp.eval(environment)
+        rval = self.rexp.eval(environment)
+        return lval < rval
 
 
 class Not(Expr):
@@ -38,8 +38,8 @@ class Not(Expr):
         self.boolexp = boolexp
 
     def eval(self,environment):
-        environment, response = self.boolexp.eval(environment)
-        return environment, not response
+        response = self.boolexp.eval(environment)
+        return not response
 
 
 class And(Expr):
@@ -49,9 +49,9 @@ class And(Expr):
         self.rexp = rboolexp
 
     def eval(self, environment):
-        environment, lval = self.lexp.eval(environment)
-        environment, rval = self.rexp.eval(environment)
-        return environment, lval and rval
+        lval = self.lexp.eval(environment)
+        rval = self.rexp.eval(environment)
+        return lval and rval
 
 
 class Or(Expr):
@@ -61,9 +61,9 @@ class Or(Expr):
         self.rexp = rboolexp
 
     def eval(self, environment):
-        environment, lval = self.lexp.eval(environment)
-        environment, rval = self.rexp.eval(environment)
-        return environment, lval or rval
+        lval = self.lexp.eval(environment)
+        rval = self.rexp.eval(environment)
+        return lval or rval
 
 
 
