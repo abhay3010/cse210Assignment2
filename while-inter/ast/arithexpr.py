@@ -38,7 +38,7 @@ class NumExpr(Expr):
     def __init__(self, val):
         self.val = val
 
-    def eval(self,environment):
+    def eval(self, environment):
         return self.val
 
 
@@ -47,7 +47,8 @@ class VarExp(Expr):
         self.token = token
 
     def eval(self, environment):
-        return environment.getordefault(self.token, 0)
+        return self.token
+
 
 
 

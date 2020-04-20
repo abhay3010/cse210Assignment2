@@ -7,7 +7,7 @@ class Skip(Cmd):
     def __init__(self):
         pass
 
-    def execute(self,env):
+    def execute(self, env):
         return env
 
 
@@ -16,8 +16,8 @@ class Assign(Cmd):
         self.variable = variable
         self.expr = expr
 
-    def execute(self,env):
-        env[self.varialbe.eval()] = self.expr.eval()
+    def execute(self, env):
+        env[self.variable.eval(env)] = self.expr.eval(env)
         return env
 
 
@@ -26,7 +26,7 @@ class Compound(Cmd):
         self.first = first
         self.second = second
 
-    def execute(self,env):
+    def execute(self, env):
         env = self.first.execute(env)
         env = self.second.execute(env)
         return env
@@ -50,10 +50,10 @@ class While(Cmd):
         self.condition = condition
         self.command = command
 
-    def execute(self,env):
+    def execute(self, env):
         if self.condition:
             env = self.command.execute(env)
-            return While(self.condition,self.command).execute(env)
+            return While(self.condition, self.command).execute(env)
         else:
             return env
 
