@@ -47,7 +47,24 @@ class VarExp(Expr):
         self.token = token
 
     def eval(self, environment):
-        return self.token
+        return environment.get(self.token, 0)
+
+
+class TernaryExp(Expr):
+
+    def __init__(self, bool, exp1, exp2):
+        self.bool = bool
+        self.exp1 = exp1
+        self.exp2 = exp2
+
+    def eval(self,environment):
+        if self.bool.eval(environment):
+            return self.exp1.eval(environment)
+        else:
+            return self.exp2.eval(environment)
+
+
+
 
 
 

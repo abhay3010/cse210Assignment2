@@ -3,7 +3,7 @@ class BoolVal(Expr):
     def __init__(self, val):
         self.val = val
 
-    def eval(self,environment):
+    def eval(self, environment):
         return self.val
 
 

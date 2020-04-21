@@ -17,7 +17,7 @@ class Assign(Cmd):
         self.expr = expr
 
     def execute(self, env):
-        env[self.variable.eval(env)] = self.expr.eval(env)
+        env[self.variable.token] = self.expr.eval(env)
         return env
 
 
@@ -39,7 +39,7 @@ class If(Cmd):
         self.false_exp = false_exp
 
     def execute(self,env):
-        if self.condition:
+        if self.condition.eval(env):
             return self.true_exp.execute(env)
         else:
             return self.false_exp.execute(env)
@@ -51,7 +51,7 @@ class While(Cmd):
         self.command = command
 
     def execute(self, env):
-        if self.condition:
+        if self.condition.eval(env):
             env = self.command.execute(env)
             return While(self.condition, self.command).execute(env)
         else:
