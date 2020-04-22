@@ -1,3 +1,15 @@
+commit 10a766744bc3bb5972005be6daba6f199f4e9228
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 16:56:38 2020 -0700
+
+    added readme
+
+commit f2458f99d9ce06192b05316bfe3c0163482bb2b0
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 16:48:33 2020 -0700
+
+    added gitlogs
+
 commit 1e073c125fb69ae5bf27d30f3b0af9c3b314d7d9
 Author: Abhay Pande <abhaypande@abhays-mbp.lan>
 Date:   Wed Apr 22 16:45:29 2020 -0700
