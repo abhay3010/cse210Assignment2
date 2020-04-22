@@ -1,4 +1,4 @@
-from parser.parser_builder import ParserBuilder
+from parser.builder import ParserBuilder
 import sys
 def print_env(env):
     response = []

@@ -1,6 +1,6 @@
-from parglare import Grammar,Parser
+from parglare import Grammar, Parser
 from ast.cmd import *
-from ast.arithexpr import  *
+from ast.arithexpr import *
 from ast.boolexp import *
 grammar = """
 cmd : skip 
