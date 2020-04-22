@@ -1,4 +1,6 @@
-from .expr import Expr
+from expr import Expr
+
+
 class BoolVal(Expr):
     def __init__(self, val):
         self.val = val

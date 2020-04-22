@@ -1,7 +1,8 @@
 from parglare import Grammar, Parser
-from ast.cmd import *
-from ast.arithexpr import *
-from ast.boolexp import *
+from whilecmds import Assign, Compound, Skip, While, If
+from arithexpr import AddExpr, VarExp, TernaryExp, SubExpr, MulExp, NumExpr
+from boolexp import Equality, LessThan, Not, And, Or, BoolVal
+
 grammar = """
 cmd : skip 
     | cmd ";" cmd {left, 1}
