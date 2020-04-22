@@ -10,7 +10,8 @@ clean-venv:
 	rm -rf ./pyenv | true;  
 
 clean:clean-arith clean-venv
-	rm -rf ./dist | true;
+	rm -rf ./dist | true; \
+	rm -rf ./build | true;
 	 
 build-venv:
 	python -m venv ./pyenv; \
