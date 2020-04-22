@@ -13,7 +13,7 @@ clean:clean-arith clean-venv
 	rm -rf ./dist | true;
 	 
 build-venv:
-	python3 -m venv ./pyenv; \
+	python -m venv ./pyenv; \
 	source ./pyenv/bin/activate; \
 	pip install --upgrade pip; \
 	pip install -r ./requirements.txt; \
