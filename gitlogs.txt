@@ -1,0 +1,83 @@
+commit 1e073c125fb69ae5bf27d30f3b0af9c3b314d7d9
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 16:45:29 2020 -0700
+
+    added changes for screen output pdf
+
+commit 30dff8ea2127d0ac3e0c57b6d342bb7a77ab5c48
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 16:29:24 2020 -0700
+
+    added changes to makefile to remove any build dir that are created during clean
+
+commit 9b3f0ffe493e42412ebaba766bba7750ad403bc0
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 01:21:47 2020 -0700
+
+    added python command correctly
+
+commit 77dc20c375e38df81a6907f69111461893f7718f
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 01:01:05 2020 -0700
+
+    added makefile; and requirements
+
+commit bc3de9bcb484174cc7f16cdc464726210648e46a
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Tue Apr 21 22:52:13 2020 -0700
+
+    removed dir for moduled due to issues with pyinstaller
+
+commit faf2e86298cabbde1aab4675c07aeea254fbb9a3
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Tue Apr 21 22:15:42 2020 -0700
+
+    renamed modules
+
+commit 3e141a7793990ee12bbac9968f10c6990fda8b63
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Mon Apr 20 22:38:55 2020 -0700
+
+    added changes for the terneray operator. Added test cases for the ternary operator
+
+commit 5f9a9d132549c355b61ede2877ea627b98732368
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Mon Apr 20 12:29:23 2020 -0700
+
+    added parser changes for the lib
+
+commit 4ce6090179a5d1cc08f6b206b6188067a9ce38bb
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Mon Apr 20 12:29:03 2020 -0700
+
+    added gitignore for python
+
+commit 49fab7701c28f3c2fc1f9ff1818c280d5fe5ffca
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sat Apr 18 18:28:26 2020 -0700
+
+    added command definitions for while language
+
+commit 89856c3321c42a6ee161dc14fb7c971ce821bdef
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sat Apr 18 17:02:37 2020 -0700
+
+    modified eval and added execute
+
+commit 1b706e1a667d9cf6146355165f100c397f94f13c
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sat Apr 18 16:07:24 2020 -0700
+
+    added the initial arith expression types and bool exp types; added empty files for the command classes
+
+commit bb8497bc6a7e2ae6f7284c0c8aa061ccfb84b9a1
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sat Apr 18 12:15:31 2020 -0700
+
+    added the initial set of tests from the instructors repository
+
+commit afcc509c77b06204681005b0195a48885c1d7f9d
+Author: Abhay <abhaypande01@gmail.com>
+Date:   Sat Apr 18 12:09:38 2020 -0700
+
+    Create README.md
