@@ -8,7 +8,10 @@ class Skip(Cmd):
         pass
 
     def execute(self, env):
-        return env
+        return None, env
+
+    def __repr__(self):
+        return "skip"
 
 
 class Assign(Cmd):
@@ -18,7 +21,10 @@ class Assign(Cmd):
 
     def execute(self, env):
         env[self.variable.token] = self.expr.eval(env)
-        return env
+        return Skip(), env
+
+    def __repr__(self):
+        return self.variable.__repr__() +  " := "+ self.expr.__repr__()
 
 
 class Compound(Cmd):
@@ -27,9 +33,12 @@ class Compound(Cmd):
         self.second = second
 
     def execute(self, env):
-        env = self.first.execute(env)
-        env = self.second.execute(env)
-        return env
+        if isinstance(self.first, Skip):
+            return self.second, env
+        else:
+            remaining,env  = self.first.execute(env)
+            return Compound(remaining,self.second), env
+
 
 
 class If(Cmd):
@@ -40,9 +49,9 @@ class If(Cmd):
 
     def execute(self,env):
         if self.condition.eval(env):
-            return self.true_exp.execute(env)
+            return self.true_exp, env
         else:
-            return self.false_exp.execute(env)
+            return self.false_exp, env
 
 
 class While(Cmd):
@@ -52,10 +61,9 @@ class While(Cmd):
 
     def execute(self, env):
         if self.condition.eval(env):
-            env = self.command.execute(env)
-            return While(self.condition, self.command).execute(env)
+           return Compound(self.command, While(self.condition, self.command)), env
         else:
-            return env
+            return Skip(), env
 
 
 

@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := generate
+.DEFAULT_GOAL := clean-a
 generate: clean compile
 
 clean-arith:
@@ -14,7 +14,7 @@ clean:clean-arith clean-venv
 	rm -rf ./build | true;
 	 
 build-venv:
-	python -m venv ./pyenv; \
+	python3 -m venv ./pyenv; \
 	source ./pyenv/bin/activate; \
 	pip install --upgrade pip; \
 	pip install -r ./requirements.txt; \

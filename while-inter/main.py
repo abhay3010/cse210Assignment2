@@ -1,13 +1,17 @@
 from builder import ParserBuilder
 import sys
 
+from whilecmds import Skip
 
-def print_env(env):
+
+def get_env_str(env):
     response = []
     for key in sorted(env.keys()):
         response.append("{0} → {1}".format(key, env[key]))
     response_str = "{"+", ".join(response) + "}"
-    print(response_str)
+    return response_str
+
+
 
 
 def main():
@@ -15,9 +19,15 @@ def main():
     for line in sys.stdin:
         env = {}
         ast = g.parse(line)
-        #print(ast)
-        env = ast.execute(env)
-        print_env(env)
+        iterations  = 10000
+        print ("original ast,",ast)
+        while not isinstance(ast, Skip) and iterations > 0:
+            ast, env = ast.execute(env)
+            print ("→ ", ast, get_env_str(env))
+            iterations-=1
+
+
+
 
 
 if __name__ == "__main__":
