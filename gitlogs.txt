@@ -1,3 +1,53 @@
+commit 801d007218b1df9f9325b2b11fb46d762f3b44ca
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sun May 3 22:15:28 2020 -0700
+
+    fixed error in self tests . Added screenshot of the run to the repo
+
+commit 55b556768296c88aebf191e74a3108ad35dccdb5
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sun May 3 21:59:21 2020 -0700
+
+    added changes to readme and updated repr for ternery operators
+
+commit e711d053d67bb2072791958972741af5265dda07
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sun May 3 17:45:59 2020 -0700
+
+    changes to commands from just the updated environment to environment and the remaining commands
+
+commit 93329dfb37fd22684042d0e3f20fe7207f58fdc3
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Sun May 3 17:43:20 2020 -0700
+
+    added changes to makefile to add while-ss as the startup script
+
+commit 23a9e117d565d85705f42ff787ebc8ae265fae23
+Merge: 206b6c2 4a3fe02
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Fri May 1 19:59:07 2020 -0700
+
+    Merge branch 'master' of https://github.com/abhay3010/cse210Assignment2
+    pullng chanvges to update local
+
+commit 206b6c2eccfae9b6469bf89f75f1438ed4aebcf4
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Fri May 1 19:59:04 2020 -0700
+
+    added repr, modified makefile for local testing
+
+commit 4a3fe025fbbb6e0e461ec00f5cc76a1873a860dd
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Fri May 1 18:00:15 2020 -0700
+
+    changed tests to those for hw 4 instead of homework 2
+
+commit 8a8e84d6f50fcea52c056293f38638a9b3368bd1
+Author: Abhay Pande <abhaypande@abhays-mbp.lan>
+Date:   Wed Apr 22 16:57:06 2020 -0700
+
+    added logs to include readme addition
+
 commit 10a766744bc3bb5972005be6daba6f199f4e9228
 Author: Abhay Pande <abhaypande@abhays-mbp.lan>
 Date:   Wed Apr 22 16:56:38 2020 -0700
