@@ -6,7 +6,7 @@ load harness
 }
 
 @test "mytest-2" {
-  check 'x<5 do x := x+1' '⇒ x := (x+1); while (x<5) do { x := (x+1) }, {}
+  check 'while x<5 do x := x+1' '⇒ x := (x+1); while (x<5) do { x := (x+1) }, {}
 ⇒ skip; while (x<5) do { x := (x+1) }, {x → 1}
 ⇒ while (x<5) do { x := (x+1) }, {x → 1}
 ⇒ x := (x+1); while (x<5) do { x := (x+1) }, {x → 1}
@@ -25,10 +25,7 @@ load harness
 }
 
 @test "mytest-3" {
-  check 'while x<-5 do x := x + 1' '⇒ skip, {}
-if ¬ (x<5) then y := 10 else y := -10
-⇒ y := -10, {}
-⇒ skip, {y → -10}'
+  check 'while x<-5 do x := x + 1' '⇒ skip, {}'
 }
 
 @test "mytest-4" {
@@ -66,8 +63,7 @@ if ¬ (x<5) then y := 10 else y := -10
 ⇒ x := (x+1); while (x<7) do { y := (y*x); x := (x+1) }, {x → 6, y → 720}
 ⇒ skip; while (x<7) do { y := (y*x); x := (x+1) }, {x → 7, y → 720}
 ⇒ while (x<7) do { y := (y*x); x := (x+1) }, {x → 7, y → 720}
-⇒ skip, {x → 7, y → 720}
-'
+⇒ skip, {x → 7, y → 720}'
 }
 
 @test "mytest-5" {
