@@ -1,9 +1,9 @@
-.DEFAULT_GOAL := clean-a
+.DEFAULT_GOAL := generate
 generate: clean compile
 
 clean-arith:
-	rm ./while | true; \
-	rm ./while.spec | true;
+	rm ./while-ss | true; \
+	rm ./while-ss.spec | true;
 
 clean-venv:
 	deactivate | true; \
@@ -24,7 +24,7 @@ build-venv:
 	
 compile: build-venv
 	source ./pyenv/bin/activate; \
-	pyinstaller --onefile --distpath ./  --name ./while ./while-inter/main.py; \
+	pyinstaller --onefile --distpath ./  --name ./while-ss ./while-inter/main.py; \
 	deactivate;
 	
 
