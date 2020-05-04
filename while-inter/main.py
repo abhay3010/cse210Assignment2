@@ -20,10 +20,9 @@ def main():
         env = {}
         ast = g.parse(line)
         iterations  = 10000
-        print ("original ast,",ast)
         while not isinstance(ast, Skip) and iterations > 0:
             ast, env = ast.execute(env)
-            print ("→ ", ast, get_env_str(env))
+            print ("⇒ {0}, {1}".format(ast, get_env_str(env)),)
             iterations-=1
 
 

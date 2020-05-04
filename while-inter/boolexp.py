@@ -27,7 +27,7 @@ class Equality(Expr):
         return lval == rval
 
     def __repr__(self):
-        return self.lexp.__repr__() + " = " + self.rexp.__repr__()
+        return "({0}={1})".format(self.lexp, self.rexp)
 
 
 
@@ -44,7 +44,7 @@ class LessThan(Expr):
         return lval < rval
 
     def __repr__(self):
-        return self.lexp.__repr__() + " < " + self.rexp.__repr__()
+        return "({0}<{1})".format(self.lexp, self.rexp)
 
 
 class Not(Expr):
@@ -72,8 +72,7 @@ class And(Expr):
         return lval and rval
 
     def __repr__(self):
-        return self.lexp.__repr__() + " ∧ " + self.rexp.__repr__()
-
+        return "({0}∧{1})".format(self.lexp,self.rexp)
 
 class Or(Expr):
 
@@ -87,7 +86,8 @@ class Or(Expr):
         return lval or rval
 
     def __repr__(self):
-        return self.lexp.__repr__() + " ∨ " + self.rexp.__repr__()
+        return "({0}∨{1})".format(self.lexp, self.rexp)
+
 
 
 
