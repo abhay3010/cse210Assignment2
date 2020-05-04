@@ -1,6 +1,6 @@
-# cse210Assignment2
-Assignment code for CSE210A Assignment 2.
-For assignment 2 I chose to code in python, assignment 1 on the other hand was done in Java. 
+# cse210Assignment4
+Assignment code for CSE210A Assignment 4.
+For assignment 4 I chose to code in python. 
 The version of python being used was Python 3.7.7. For managing my packages, I used pip. These dependencies need to be installed beforehand for the code to work. 
 Reference for setting up python3 and pip on mac : https://evansdianga.com/install-pip-osx/
 

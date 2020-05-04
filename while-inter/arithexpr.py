@@ -74,11 +74,15 @@ class TernaryExp(Expr):
         self.exp1 = exp1
         self.exp2 = exp2
 
-    def eval(self,environment):
+    def eval(self, environment):
         if self.bool.eval(environment):
             return self.exp1.eval(environment)
         else:
             return self.exp2.eval(environment)
+
+    def __repr__(self):
+        return "{0} ? {1} : {2}".format(self.bool, self.exp1, self.exp2)
+
 
 
 
